@@ -44,4 +44,58 @@ Router.map(function () {
             'moolyaLeftNav': {to: 'leftNav'}
         })
     });
+
+    this.route('chart', {
+        path:'/chart',
+        layoutTemplate:'moolyaLayout',
+        yieldTemplates: _.extend({}, {}, {
+            'moolyaHeader': {to: 'header'},
+            'moolyaLeftNav': {to: 'leftNav'}
+        })
+    });
+
+    this.route('awardsAndRewards', {
+        path:'/awardsAndRewards',
+        layoutTemplate:'moolyaLayout',
+        yieldTemplates: _.extend({}, {}, {
+            'moolyaHeader': {to: 'header'},
+            'moolyaLeftNav': {to: 'leftNav'}
+        })
+    });
+
+    this.route('promoters', {
+        path:'/promoters',
+        layoutTemplate:'moolyaLayout',
+        yieldTemplates: _.extend({}, {}, {
+            'moolyaHeader': {to: 'header'},
+            'moolyaLeftNav': {to: 'leftNav'}
+        })
+    });
+
+    this.route('membership', {
+        path:'/membership',
+        layoutTemplate:'moolyaLayout',
+        yieldTemplates: _.extend({}, {}, {
+            'moolyaHeader': {to: 'header'},
+            'moolyaLeftNav': {to: 'leftNav'}
+        })
+    });
+
+    this.route('library', {
+        path:'/library',
+        layoutTemplate:'moolyaLayout',
+        yieldTemplates: _.extend({}, {}, {
+            'moolyaHeader': {to: 'header'},
+            'moolyaLeftNav': {to: 'leftNav'}
+        })
+    });
+
+    this.route('businessData', {
+        path:'/businessData',
+        layoutTemplate:'moolyaLayout',
+        yieldTemplates: _.extend({}, {}, {
+            'moolyaHeader': {to: 'header'},
+            'moolyaLeftNav': {to: 'leftNav'}
+        })
+    });
 })
