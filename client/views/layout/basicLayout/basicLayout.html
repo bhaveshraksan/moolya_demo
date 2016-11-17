@@ -1,0 +1,12 @@
+
+<template name="basicLayout">
+    {{> yield region='header'}}
+    <div class="smt-main-container">
+        {{> smtMrCenterPortion}}
+    </div>
+</template>
+<template name="smtMrCenterPortion">
+    <div style="" class="modal-window">
+        {{>yield}}
+    </div>
+</template>
