@@ -26,7 +26,7 @@ Router.map(function () {
     //     })
     // });
     this.route('startup', {
-        path:'/startup',
+        path:'/',
         layoutTemplate:'moolyaLayout',
         yieldTemplates: _.extend({}, {}, {
             'moolyaHeader': {to: 'header'},
