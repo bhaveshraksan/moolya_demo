@@ -1,0 +1,110 @@
+<template name="moolyaLeftNav">
+    <div class="moolya-left-nav container-fluid mooly-style-3">
+        <div class="row">
+            <div class="left-pannel">
+                <ul class="nav nav-pills nav-wizard">
+                    <li class="{{menuItemClass 'about'}}">
+                        <div class="nav-wedge">
+                            <div class="nav-wedge-inner"></div>
+                        </div>
+                        <div class="wiz">
+                            <a href="{{pathFor 'about'}}">
+                                <div class="wiz-inner"><span><img src="assets/images/about.png"></span>
+                                    <span>ABOUT</span></div>
+                            </a>
+                        </div>
+                        <div class="nav-arrow">
+                            <div class="nav-arrow-inner"></div>
+                        </div>
+                    </li>
+                    <li class="{{menuItemClass 'promoters'}}">
+                        <div class="nav-arrow">
+                            <div class="nav-arrow-inner"></div>
+                        </div>
+                        <div class="wiz">
+                            <a href="{{pathFor 'promoters'}}">
+                                <div class="wiz-inner"><span><img src="assets/images/m&p.png"></span>
+                                    <span>M&amp;P</span></div>
+                            </a>
+                        </div>
+                        <div class="nav-wedge">
+                            <div class="nav-wedge-inner"></div>
+                        </div>
+                    </li>
+                    <li class="{{menuItemClass 'businessData'}}">
+                        <div class="nav-arrow">
+                            <div class="nav-arrow-inner"></div>
+                        </div>
+                        <div class="wiz">
+                            <a href="{{pathFor 'businessData'}}">
+                                <div class="wiz-inner"><span><img src="assets/images/data.png"></span> <span>DATA</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="nav-wedge">
+                            <div class="nav-wedge-inner"></div>
+                        </div>
+                    </li>
+                    <li class="{{menuItemClass 'chart'}}">
+                        <div class="nav-wedge">
+                            <div class="nav-wedge-inner"></div>
+                        </div>
+                        <div class="wiz" id="mlibrary">
+                            <a href="{{pathFor 'chart'}}">
+                                <div class="wiz-inner"><span><img src="assets/images/clients.png"></span>
+                                    <span>CHARTS</span></div>
+                            </a>
+                        </div>
+                        <div class="nav-arrow">
+                            <div class="nav-arrow-inner"></div>
+                        </div>
+                    </li>
+                    <li class="{{menuItemClass 'awardsAndRewards'}}">
+                        <div class="nav-wedge">
+                            <div class="nav-wedge-inner"></div>
+                        </div>
+                        <div class="wiz">
+                            <a href="{{pathFor 'awardsAndRewards'}}">
+                                <div class="wiz-inner"><span><img src="assets/images/certificate.png"></span> <span>A&amp;R</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="nav-arrow">
+                            <div class="nav-arrow-inner"></div>
+                        </div>
+                    </li>
+                    <li class="{{menuItemClass 'library'}}">
+                        <div class="nav-wedge">
+                            <div class="nav-wedge-inner"></div>
+                        </div>
+                        <div class="wiz">
+                            <a href="{{pathFor 'library'}}">
+                                <div class="wiz-inner"><span><img src="assets/images/library.png"></span>
+                                    <span>LIBRARY</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="nav-arrow">
+                            <div class="nav-arrow-inner"></div>
+                        </div>
+                    </li>
+                    <li class="{{menuItemClass 'membership'}}">
+                        <div class="nav-wedge">
+                            <div class="nav-wedge-inner"></div>
+                        </div>
+                        <div class="wiz">
+                            <a href="{{pathFor 'membership'}}">
+                                <div class="wiz-inner"><span><img src="assets/images/news.png"></span> <span>MCL</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="nav-arrow">
+                            <div class="nav-arrow-inner"></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</template>

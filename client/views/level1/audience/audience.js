@@ -1,10 +1,16 @@
-Template.about.onRendered(function(){
-    var swiper = new Swiper('.about-swiper', {
+/**
+ * Created by murali on 18/11/16.
+ */
+
+Template.audience.onRendered(function(){
+
+    var swiper = new Swiper('.audience-swiper', {
         nextButton: '.swiper-button-next',
         prevButton: '.swiper-button-prev',
         spaceBetween: 0,
         autoplay: 2500,
-        slidesPerView: 6,
+        slidesPerView: 5,
         autoplayDisableOnInteraction: false
     });
+
 });

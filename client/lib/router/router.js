@@ -25,12 +25,19 @@ Router.map(function () {
     //         'basicHeader': {to: 'header'}
     //     })
     // });
+    /*this.route('home', {
+        path:'/',
+        layoutTemplate:'moolyaLayout',
+        yieldTemplates: _.extend({}, {}, {
+            'moolyaHeader': {to: 'header'}
+        })
+    });*/
     this.route('startup', {
         path:'/',
         layoutTemplate:'moolyaLayout',
         yieldTemplates: _.extend({}, {}, {
-            'moolyaHeader': {to: 'header'},
-            'moolyaLeftNav': {to: 'leftNav'}
+            'moolyaHomeHeader': {to: 'header'},
+            'moolyaNavHome': {to: 'leftNav'}
         })
     });
 
@@ -98,4 +105,88 @@ Router.map(function () {
             'moolyaLeftNav': {to: 'leftNav'}
         })
     });
+
+    this.route('ideators', {
+        path:'/ideators',
+        layoutTemplate:'moolyaLayout',
+        yieldTemplates: _.extend({}, {}, {
+            'moolyaHeader': {to: 'header'},
+            'moolyaNavHome': {to: 'leftNav'}
+        })
+    });
+
+    this.route('idea', {
+        path:'/idea',
+        layoutTemplate:'moolyaLayout',
+        yieldTemplates: _.extend({}, {}, {
+            'moolyaHeader': {to: 'header'},
+            'moolyaNavIdeators': {to: 'leftNav'}
+        })
+    });
+
+    this.route('ideator', {
+        path:'/ideator',
+        layoutTemplate:'moolyaLayout',
+        yieldTemplates: _.extend({}, {}, {
+            'moolyaHeader': {to: 'header'},
+            'moolyaNavIdeators': {to: 'leftNav'}
+        })
+    });
+
+    this.route('problemAndSolution', {
+        path:'/problemAndSolution',
+        layoutTemplate:'moolyaLayout',
+        yieldTemplates: _.extend({}, {}, {
+            'moolyaHeader': {to: 'header'},
+            'moolyaNavIdeators': {to: 'leftNav'}
+        })
+    });
+
+    this.route('ideatorlibrary', {
+        path:'/ideatorlibrary',
+        layoutTemplate:'moolyaLayout',
+        yieldTemplates: _.extend({}, {}, {
+            'moolyaHeader': {to: 'header'},
+            'moolyaNavIdeators': {to: 'leftNav'}
+        })
+    });
+
+    this.route('audience', {
+        path:'/audience',
+        layoutTemplate:'moolyaLayout',
+        yieldTemplates: _.extend({}, {}, {
+            'moolyaHeader': {to: 'header'},
+            'moolyaNavIdeators': {to: 'leftNav'}
+        })
+    });
+
+    this.route('strategyPlan', {
+        path:'/strategyPlan',
+        layoutTemplate:'moolyaLayout',
+        yieldTemplates: _.extend({}, {}, {
+            'moolyaHeader': {to: 'header'},
+            'moolyaNavIdeators': {to: 'leftNav'}
+        })
+    });
+
+    this.route('ipAndTradeMark', {
+        path:'/ipAndTradeMark',
+        layoutTemplate:'moolyaLayout',
+        yieldTemplates: _.extend({}, {}, {
+            'moolyaHeader': {to: 'header'},
+            'moolyaNavIdeators': {to: 'leftNav'}
+        })
+    });
+
+    this.route('lookFor', {
+        path:'/lookFor',
+        layoutTemplate:'moolyaLayout',
+        yieldTemplates: _.extend({}, {}, {
+            'moolyaHeader': {to: 'header'},
+            'moolyaNavIdeators': {to: 'leftNav'}
+        })
+    });
+
+
+
 })

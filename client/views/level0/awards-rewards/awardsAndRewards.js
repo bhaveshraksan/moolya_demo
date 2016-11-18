@@ -1,4 +1,4 @@
-Template.businessData.onRendered(function(){
+Template.awardsAndRewards.onRendered(function (){
     Meteor.defer(function (){
         $('.data-grid').isotope({
             itemSelector: '.grid-item',
@@ -7,5 +7,4 @@ Template.businessData.onRendered(function(){
                 columnWidth: '.grid-sizer'
             }});
     })
-
-});
+})

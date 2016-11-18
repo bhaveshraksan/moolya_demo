@@ -63,47 +63,7 @@
 
 	margin-left: -6px;
 }
-/*swiper menu*/
-.swiper-container {
-	/*width: 64%;*/
-	height: 50px;
-}
-.offset-center{
-	margin: auto;
-	float: none;
-}
-.swiper-slide {
-	text-align: center;
-	font-size: 15px;
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: -webkit-flex;
-	display: flex;
-	-webkit-box-pack: center;
-	-ms-flex-pack: center;
-	-webkit-justify-content: center;
-	justify-content: center;
-	-webkit-box-align: center;
-	-ms-flex-align: center;
-	-webkit-align-items: center;
-	align-items: center;
-}
-ul.swiper-wrapper{
-	padding: 0px;
-	margin: 0px;
-}
-.swiper_tabs li{
-	width:auto;
-	padding:0px 22px;
-	list-style:none;
-	margin-left:8px;
-	cursor:pointer;
-	margin-bottom:0px;
-	height:40px;
-}
-.swiper_tabs li a{
-	text-decoration: none;
-}
+/}
 /*breadcrumbs*/
 .moolya-breadcrumbs-wrapp{
 	float: left;
@@ -435,10 +395,6 @@ ul.swiper-wrapper{
 }
 /*//scroll bar*/
 
-/*swiper scroll bar*/
-.swiper-container-horizontal>.swiper-scrollbar{height:  2px !important;}
-.swiper-scrollbar-drag{height: 5px !important; margin-top: -2px;}
-
 
 /*footer css*/
 .menuContentbg{
@@ -737,29 +693,6 @@ ul.swiper-wrapper{
 .moolya-app-abt-client{background: #fff; margin-top: -15px; padding-top: 10px; height: 250px; overflow-y: scroll;}
 .moolya-app-abt-infrm{background: #fff; margin-top: -15px; padding-top: 10px; height: 505px; overflow-y: scroll}
 .about-logo img{ width: 180px;}
-.swiper-container {
-	width: 100%;
-	height: 100%;
-}
-.swiper-slide {
-	text-align: center;
-	font-size: 18px;
-	background: #fff;
-
-	/* Center slide text vertically */
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: -webkit-flex;
-	display: flex;
-	-webkit-box-pack: center;
-	-ms-flex-pack: center;
-	-webkit-justify-content: center;
-	justify-content: center;
-	-webkit-box-align: center;
-	-ms-flex-align: center;
-	-webkit-align-items: center;
-	align-items: center;
-}
 
 /*about end*/
 
@@ -1294,3 +1227,16 @@ span.sb-icon:before {
 		width: 7.5%;
 	}
 }
+
+.user-icon {
+	width: 130px;
+	height: 130px;
+	border: 1px solid #CCC;
+	border-radius: 50%;
+	font-size: 75px;
+	margin-top: 15px;
+	padding: 5px 25px 0px 22px;
+	text-align: center;
+}
+
+.moolya-bg{background: #fff;}
