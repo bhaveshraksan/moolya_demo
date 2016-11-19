@@ -6,6 +6,11 @@ Template.businessData.onRendered(function(){
             masonry: {
                 columnWidth: '.grid-sizer'
             }});
+
+    })
+    Meteor.defer(function (){
+       // debugger;
+        var util= new MlUtils().fixedContainer();
     })
 
 });

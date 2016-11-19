@@ -7,4 +7,8 @@ Template.about.onRendered(function(){
         slidesPerView: 6,
         autoplayDisableOnInteraction: false
     });
+    Meteor.defer(function (){
+       // debugger;
+        var util= new MlUtils().fixedContainer();
+    })
 });

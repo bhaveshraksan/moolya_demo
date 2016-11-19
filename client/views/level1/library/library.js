@@ -10,6 +10,13 @@ Template.library.onRendered(function(){
             paginationClickable: true,
         });
     })
-
-
+    Meteor.defer(function (){
+       // debugger;
+        var util= new MlUtils().fixedContainer();
+    })
 });
+
+Template.library.onRendered(function(){
+    $("[rel^='lightbox']").prettyPhoto();
+});
+

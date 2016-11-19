@@ -7,4 +7,8 @@ Template.awardsAndRewards.onRendered(function (){
                 columnWidth: '.grid-sizer'
             }});
     })
+    Meteor.defer(function (){
+       // debugger;
+        var util= new MlUtils().fixedContainer();
+    })
 })

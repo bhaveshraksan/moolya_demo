@@ -8,5 +8,9 @@ Template.strategyPlan.onRendered(function(){
         paginationClickable: true,
         slidesPerView: '1',
     });
+    Meteor.defer(function (){
+       // debugger;
+        var util= new MlUtils().fixedContainer();
+    })
 
 });

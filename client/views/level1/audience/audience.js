@@ -13,4 +13,8 @@ Template.audience.onRendered(function(){
         autoplayDisableOnInteraction: false
     });
 
+    Meteor.defer(function (){
+       // debugger;
+        var util= new MlUtils().fixedContainer();
+    })
 });

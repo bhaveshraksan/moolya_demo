@@ -1,0 +1,114 @@
+<template name="moolyaNavFunders">
+    <div class="moolya-left-nav container-fluid mooly-style-3">
+        <div class="row">
+            <div class="left-pannel">
+                <ul class="nav nav-pills nav-wizard">
+                    <li class="{{menuItemClass 'aboutFunder'}}">
+                        <div class="nav-wedge">
+                            <div class="nav-wedge-inner"></div>
+                        </div>
+                        <div class="wiz">
+                            <a href="{{pathFor 'aboutFunder'}}">
+                                <div class="wiz-inner"> <span><img src="assets/images/about.png"></span> <span>ABOUT</span> </div>
+                            </a>
+                        </div>
+                        <div class="nav-arrow">
+                            <div class="nav-arrow-inner"></div>
+                        </div>
+                    </li>
+                    <li class="{{menuItemClass 'investment'}}">
+                        <div class="nav-arrow">
+                            <div class="nav-arrow-inner"></div>
+                        </div>
+                        <div class="wiz">
+                            <a href="{{pathFor 'investment'}}">
+                                <div class="wiz-inner"> <span><img src="assets/images/m&p.png"></span> <span><a href="{{pathFor 'investment'}}">INVESTMENT</a></span> </div>
+                            </a>
+                        </div>
+                        <div class="nav-wedge">
+                            <div class="nav-wedge-inner"></div>
+                        </div>
+                    </li>
+                    <li class="{{menuItemClass 'principles' or menuItemClass 'principleDetails'}}">
+                        <div class="nav-arrow">
+                            <div class="nav-arrow-inner"></div>
+                        </div>
+                        <div class="wiz">
+                            <a href="{{pathFor 'principles'}}">
+                                <div class="wiz-inner"> <span><img src="assets/images/data.png"></span> <span>PRINCIPAL</span> </div>
+                            </a>
+                        </div>
+                        <div class="nav-wedge">
+                            <div class="nav-wedge-inner"></div>
+                        </div>
+                    </li>
+                    <li class="{{menuItemClass 'areaofinterest'}}">
+                        <div class="nav-wedge">
+                            <div class="nav-wedge-inner"></div>
+                        </div>
+                        <div class="wiz" id="mlibrary">
+                            <a href="{{pathFor 'areaofinterest'}}">
+                                <div class="wiz-inner"> <span><img src="assets/images/clients.png"></span> <span>AREA OF INTREST</span></div>
+                            </a>
+                        </div>
+                        <div class="nav-arrow">
+                            <div class="nav-arrow-inner"></div>
+                        </div>
+                    </li>
+                    <li class="{{menuItemClass 'success'}}">
+                        <div class="nav-wedge">
+                            <div class="nav-wedge-inner"></div>
+                        </div>
+                        <div class="wiz">
+                            <a href="{{pathFor 'success'}}">
+                                <div class="wiz-inner"> <span><img src="assets/images/certificate.png"></span> <span>SUCCESS STORIES</span> </div>
+                            </a>
+                        </div>
+                        <div class="nav-arrow">
+                            <div class="nav-arrow-inner"></div>
+                        </div>
+                    </li>
+                    <li class="{{menuItemClass 'engagement'}}">
+                        <div class="nav-wedge">
+                            <div class="nav-wedge-inner"></div>
+                        </div>
+                        <div class="wiz">
+                            <a href="{{pathFor 'engagement'}}">
+                                <div class="wiz-inner"> <span><img src="assets/images/certificate.png"></span> <span>ENGAGEMENT METHOD</span> </div>
+                            </a>
+                        </div>
+                        <div class="nav-arrow">
+                            <div class="nav-arrow-inner"></div>
+                        </div>
+                    </li>
+                    <li class="{{menuItemClass 'news'}}">
+                        <div class="nav-wedge">
+                            <div class="nav-wedge-inner"></div>
+                        </div>
+                        <div class="wiz">
+                            <a href="{{pathFor 'news'}}">
+                                <div class="wiz-inner"> <span><img src="assets/images/library.png"></span> <span>NEWS</span> </div>
+                            </a>
+                        </div>
+                        <div class="nav-arrow">
+                            <div class="nav-arrow-inner"></div>
+                        </div>
+                    </li>
+                    <li class="{{menuItemClass 'libraryFunder'}}">
+                        <div class="nav-wedge">
+                            <div class="nav-wedge-inner"></div>
+                        </div>
+                        <div class="wiz">
+                            <a href="{{pathFor 'libraryFunder'}}">
+                                <div class="wiz-inner"> <span><img src="assets/images/library.png"></span> <span>LIBRARY</span> </div>
+                            </a>
+                        </div>
+                        <div class="nav-arrow">
+                            <div class="nav-arrow-inner"></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</template>

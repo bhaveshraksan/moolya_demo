@@ -4,6 +4,7 @@
 
 Template.chart.onRendered(function(){
 
+    var container = new MlUtils().fixedContainer();
 
     var chart = new CanvasJS.Chart("finance",
         {

@@ -110,7 +110,7 @@ Router.map(function () {
         path:'/ideators',
         layoutTemplate:'moolyaLayout',
         yieldTemplates: _.extend({}, {}, {
-            'moolyaHeader': {to: 'header'},
+            'ideatorHeader': {to: 'header'},
             'moolyaNavHome': {to: 'leftNav'}
         })
     });
@@ -119,7 +119,7 @@ Router.map(function () {
         path:'/idea',
         layoutTemplate:'moolyaLayout',
         yieldTemplates: _.extend({}, {}, {
-            'moolyaHeader': {to: 'header'},
+            'ideatorHeader': {to: 'header'},
             'moolyaNavIdeators': {to: 'leftNav'}
         })
     });
@@ -128,7 +128,7 @@ Router.map(function () {
         path:'/ideator',
         layoutTemplate:'moolyaLayout',
         yieldTemplates: _.extend({}, {}, {
-            'moolyaHeader': {to: 'header'},
+            'ideatorHeader': {to: 'header'},
             'moolyaNavIdeators': {to: 'leftNav'}
         })
     });
@@ -137,7 +137,7 @@ Router.map(function () {
         path:'/problemAndSolution',
         layoutTemplate:'moolyaLayout',
         yieldTemplates: _.extend({}, {}, {
-            'moolyaHeader': {to: 'header'},
+            'ideatorHeader': {to: 'header'},
             'moolyaNavIdeators': {to: 'leftNav'}
         })
     });
@@ -146,7 +146,7 @@ Router.map(function () {
         path:'/ideatorlibrary',
         layoutTemplate:'moolyaLayout',
         yieldTemplates: _.extend({}, {}, {
-            'moolyaHeader': {to: 'header'},
+            'ideatorHeader': {to: 'header'},
             'moolyaNavIdeators': {to: 'leftNav'}
         })
     });
@@ -155,7 +155,7 @@ Router.map(function () {
         path:'/audience',
         layoutTemplate:'moolyaLayout',
         yieldTemplates: _.extend({}, {}, {
-            'moolyaHeader': {to: 'header'},
+            'ideatorHeader': {to: 'header'},
             'moolyaNavIdeators': {to: 'leftNav'}
         })
     });
@@ -164,7 +164,7 @@ Router.map(function () {
         path:'/strategyPlan',
         layoutTemplate:'moolyaLayout',
         yieldTemplates: _.extend({}, {}, {
-            'moolyaHeader': {to: 'header'},
+            'ideatorHeader': {to: 'header'},
             'moolyaNavIdeators': {to: 'leftNav'}
         })
     });
@@ -173,7 +173,7 @@ Router.map(function () {
         path:'/ipAndTradeMark',
         layoutTemplate:'moolyaLayout',
         yieldTemplates: _.extend({}, {}, {
-            'moolyaHeader': {to: 'header'},
+            'ideatorHeader': {to: 'header'},
             'moolyaNavIdeators': {to: 'leftNav'}
         })
     });
@@ -182,11 +182,100 @@ Router.map(function () {
         path:'/lookFor',
         layoutTemplate:'moolyaLayout',
         yieldTemplates: _.extend({}, {}, {
-            'moolyaHeader': {to: 'header'},
+            'ideatorHeader': {to: 'header'},
             'moolyaNavIdeators': {to: 'leftNav'}
         })
     });
 
+    this.route('funders', {
+        path:'/funders',
+        layoutTemplate:'moolyaLayout',
+        yieldTemplates: _.extend({}, {}, {
+            'funderHeader': {to: 'header'},
+            'moolyaNavHome': {to: 'leftNav'}
+        })
+    });
+
+    this.route('aboutFunder', {
+        path:'/aboutFunder',
+        layoutTemplate:'moolyaLayout',
+        yieldTemplates: _.extend({}, {}, {
+            'funderHeader': {to: 'header'},
+            'moolyaNavFunders': {to: 'leftNav'}
+        })
+    });
+
+    this.route('investment', {
+        path:'/investment',
+        layoutTemplate:'moolyaLayout',
+        yieldTemplates: _.extend({}, {}, {
+            'funderHeader': {to: 'header'},
+            'moolyaNavFunders': {to: 'leftNav'}
+        })
+    });
+
+    this.route('principles', {
+        path:'/principles',
+        layoutTemplate:'moolyaLayout',
+        yieldTemplates: _.extend({}, {}, {
+            'funderHeader': {to: 'header'},
+            'moolyaNavFunders': {to: 'leftNav'}
+        })
+    });
+
+    this.route('principleDetails', {
+        path:'/principleDetails',
+        layoutTemplate:'moolyaLayout',
+        yieldTemplates: _.extend({}, {}, {
+            'funderHeader': {to: 'header'},
+            'moolyaNavFunders': {to: 'leftNav'}
+        })
+    });
+
+    this.route('areaofinterest', {
+        path:'/areaofinterest',
+        layoutTemplate:'moolyaLayout',
+        yieldTemplates: _.extend({}, {}, {
+            'funderHeader': {to: 'header'},
+            'moolyaNavFunders': {to: 'leftNav'}
+        })
+    });
+
+    this.route('engagement', {
+        path:'/engagement',
+        layoutTemplate:'moolyaLayout',
+        yieldTemplates: _.extend({}, {}, {
+            'funderHeader': {to: 'header'},
+            'moolyaNavFunders': {to: 'leftNav'}
+        })
+    });
+
+    this.route('success', {
+        path:'/success',
+        layoutTemplate:'moolyaLayout',
+        yieldTemplates: _.extend({}, {}, {
+            'funderHeader': {to: 'header'},
+            'moolyaNavFunders': {to: 'leftNav'}
+        })
+    });
+
+    this.route('news', {
+        path:'/news',
+        layoutTemplate:'moolyaLayout',
+        yieldTemplates: _.extend({}, {}, {
+            'funderHeader': {to: 'header'},
+            'moolyaNavFunders': {to: 'leftNav'}
+        })
+    });
+
+    this.route('libraryFunder', {
+        path:'/libraryFunder',
+        layoutTemplate:'moolyaLayout',
+        yieldTemplates: _.extend({}, {}, {
+            'funderHeader': {to: 'header'},
+            'moolyaNavFunders': {to: 'leftNav'}
+        })
+    });
 
 
 })

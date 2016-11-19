@@ -11,5 +11,11 @@ Template.ideator.onRendered(function(){
         slidesPerView: 5,
         autoplayDisableOnInteraction: false
     });
+    Meteor.defer(function (){
+       // debugger;
+        var util= new MlUtils().fixedContainer();
+    })
+
+
 
 });
