@@ -69,8 +69,8 @@ MoolyaNotifier = {
                 "</div> </body> </html>";
 
             
-           // var contactTo='contactus@raksan.in';
-            var contactTo='muralidharreddy.kunduru@raksanconsulting.com';
+            var contactTo='contactus@raksan.in';
+           // var contactTo='muralidharreddy.kunduru@raksanconsulting.com';
            // var fromEmail = "noreply@moolya.in";
             Meteor.setTimeout(function () {                                     // 18
                 new MoolyaEmailSys().sendHTML({                                     // 19
