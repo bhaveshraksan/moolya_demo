@@ -2,18 +2,18 @@
  * Created by murali on 19/11/16.
  */
 Template.success.onRendered(function(){
-    Meteor.defer(function (){
-        $('.data-grid').isotope({
-            itemSelector: '.grid-item',
-            percentPosition: true,
-            masonry: {
-                columnWidth: '.grid-sizer'
-            }});
 
-    })
     Meteor.defer(function (){
         // debugger;
         var util= new MlUtils().fixedContainer();
     })
+    var swiper = new Swiper('.success-swiper', {
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        spaceBetween: 0,
+        autoplay: 2500,
+        slidesPerView: 5,
+        autoplayDisableOnInteraction: false
+    });
 
 });

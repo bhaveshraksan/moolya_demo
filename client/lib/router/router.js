@@ -3,52 +3,27 @@ Router.configure({
     notFoundTemplate: "notFound",
     loadingTemplate: 'loading'
 })
-// Router.onBeforeAction(loginrequired, {
-//     except: ['smtAdminLogin',]
-// });
-//
-// Router.onBeforeAction(goToDashboard, {
-//     only: ['smtAdminLogin']
-// });
 Router.map(function () {
-    // this.route('homePage', {
-    //     path:'/',
-    //     layoutTemplate:'basicLayout',
-    //     yieldTemplates: _.extend({}, {}, {
-    //         'basicHeader': {to: 'header'}
-    //     })
-    // });
-    // this.route('test', {
-    //     path:'/test',
-    //     layoutTemplate:'basicLayout',
-    //     yieldTemplates: _.extend({}, {}, {
-    //         'basicHeader': {to: 'header'}
-    //     })
-    // });
-    /*this.route('home', {
-        path:'/',
-        layoutTemplate:'moolyaLayout',
-        yieldTemplates: _.extend({}, {}, {
-            'moolyaHeader': {to: 'header'}
-        })
-    });*/
+
+
+
     this.route('startup', {
         path:'/',
         layoutTemplate:'moolyaLayout',
         yieldTemplates: _.extend({}, {}, {
             'moolyaHomeHeader': {to: 'header'},
-            'moolyaNavHome': {to: 'leftNav'}
+            'moolyaNavHome': {to: 'leftNav'},
+            'footerLayout': {to: 'footer'}
         })
     });
-
-
 
     this.route('about', {
         path:'/about',
         layoutTemplate:'moolyaLayout',
         yieldTemplates: _.extend({}, {}, {
             'moolyaHeader': {to: 'header'},
-            'moolyaLeftNav': {to: 'leftNav'}
+            'moolyaLeftNav': {to: 'leftNav'},
+            'footerLayout': {to: 'footer'}
         })
     });
 
