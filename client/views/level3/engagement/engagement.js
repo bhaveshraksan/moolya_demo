@@ -1,14 +1,14 @@
 /**
  * Created by murali on 19/11/16.
  */
-Template.principleDetails.onRendered(function(){
+Template.engagementsp.onRendered(function(){
 
     Meteor.defer(function (){
-        //debugger;
+       // debugger;
         var util= new MlUtils().fixedContainer();
     })
 
-    var swiper = new Swiper('.principleDetails-swiper', {
+    var swiper = new Swiper('.engagement-swiper', {
         nextButton: '.swiper-button-next',
         prevButton: '.swiper-button-prev',
         spaceBetween: 0,

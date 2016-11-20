@@ -197,7 +197,7 @@ Router.map(function () {
     });
 
     this.route('aboutFunder', {
-        path:'/aboutFunder',
+    path:'/aboutFunder',
         layoutTemplate:'moolyaLayout',
         yieldTemplates: _.extend({}, {}, {
             'funderHeader': {to: 'header'},
@@ -276,6 +276,60 @@ Router.map(function () {
             'moolyaNavFunders': {to: 'leftNav'}
         })
     });
+
+
+    this.route('serviceProviders', {
+        path:'/serviceProviders',
+        layoutTemplate:'moolyaLayout',
+        yieldTemplates: _.extend({}, {}, {
+            'serviceProviderHeader': {to: 'header'},
+            'moolyaNavHome': {to: 'leftNav'}
+        })
+    });
+
+
+    this.route('serviceProvider', {
+        path:'/serviceProvider',
+        layoutTemplate:'moolyaLayout',
+        yieldTemplates: _.extend({}, {}, {
+            'serviceProviderHeader': {to: 'header'},
+            'moolyaNavserviceProviders': {to: 'leftNav'}
+        })
+    });
+    this.route('serviceDetails', {
+        path:'/serviceDetails',
+        layoutTemplate:'moolyaLayout',
+        yieldTemplates: _.extend({}, {}, {
+            'serviceProviderHeader': {to: 'header'},
+            'moolyaNavserviceProviders': {to: 'leftNav'}
+        })
+    });
+    this.route('engagementsp', {
+        path:'/engagementsp',
+        layoutTemplate:'moolyaLayout',
+        yieldTemplates: _.extend({}, {}, {
+            'serviceProviderHeader': {to: 'header'},
+            'moolyaNavserviceProviders': {to: 'leftNav'}
+        })
+    });
+    this.route('awardsAndRewardssp', {
+        path:'/awardsAndRewardssp',
+        layoutTemplate:'moolyaLayout',
+        yieldTemplates: _.extend({}, {}, {
+            'serviceProviderHeader': {to: 'header'},
+            'moolyaNavserviceProviders': {to: 'leftNav'}
+        })
+    });
+    this.route('librarysp', {
+        path:'/librarysp',
+        layoutTemplate:'moolyaLayout',
+        yieldTemplates: _.extend({}, {}, {
+            'serviceProviderHeader': {to: 'header'},
+            'moolyaNavserviceProviders': {to: 'leftNav'}
+        })
+    });
+
+
 
 
 })
