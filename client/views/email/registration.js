@@ -1,3 +1,4 @@
+RegForm=null;
 Template.registration.events({
     "click .register_btn":function(e, t)
     {
@@ -26,7 +27,7 @@ Template.registration.rendered=function(){
         }
     });
     var theForm = document.getElementById('theForm');
-    new stepsForm(theForm, {
+    RegForm=new stepsForm(theForm, {
         onSubmit: function (form) {
             new MlUtils().getFormValues($('#theForm'),function(data){
                 var adminUsersInfo = {};
@@ -39,15 +40,34 @@ Template.registration.rendered=function(){
                 adminUsersInfo.city             = data.q4;
                 adminUsersInfo.regType  = data.q5;
                 adminUsersInfo.referralType = data.q8;
+                adminUsersInfo.companyName = data.q9;
+                adminUsersInfo.companyUrl = data.q10;
                 Meteor.call("registerMoolyaUser", adminUsersInfo, function (err,res) {
                     if(!err){
                         document.getElementById("theForm").reset();
-                        classie.addClass(theForm.querySelector('.simform-inner'), 'hide');
-                        var messageEl = theForm.querySelector('.final-message');
-                        messageEl.innerHTML = 'thank you! for registering with moolya.<br/>we will contact you shortly<br/>check for our email in your mailbox. ';
-                        classie.addClass(messageEl, 'show');
+                        /*classie.addClass(theForm.querySelector('.simform-inner'), 'hide');
+                         var messageEl = theForm.querySelector('.final-message');
+                         messageEl.innerHTML = 'thank you! for registering with moolya.<br/>we will contact you shortly<br/>check for our email in your mailbox. ';
+                         classie.addClass(messageEl, 'show');*/
+                        $('.final-message').html('thank you! for registering with moolya.<br/>we will contact you shortly<br/>check for our email in your mailbox.');
+                        $('.final-message').removeClass('hide').addClass('show');
+                        $(".simform-inner").removeClass('show').addClass('hide');
+                        setTimeout(function () {
+                            $('.final-message').removeClass('show').addClass('hide');
+                            $(".simform-inner").removeClass('hide').addClass('show');
+                            RegForm._reset();
+                        },5000);
                     }else{
-                        toastr.error(err.reason);
+                        document.getElementById("theForm").reset();
+                        $(".simform-inner").removeClass('show').addClass('hide');
+                        $('.final-message').text(err.reason);
+                        $('.final-message').removeClass('hide').addClass('show');
+                        setTimeout(function () {
+                            $('.final-message').removeClass('show').addClass('hide');
+                            $(".simform-inner").removeClass('hide').addClass('show');
+                            RegForm._reset();
+                        },5000);
+
                     }
                 });
             });

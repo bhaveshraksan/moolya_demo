@@ -42,6 +42,34 @@
 		onSubmit : function() { return false; }
 	};
 
+	stepsForm.prototype._reset =function() {
+		this.current = 0;
+
+		// show first question
+		for(var i=0;i<this.questionsCount;i++){
+			classie.removeClass(this.questions[i], 'current');
+		}
+		//classie.removeClass(this.questions, 'current');
+		classie.addClass( this.questions[0], 'current' );
+		// next question control
+		this.ctrlNext = this.el.querySelector( 'button.next' );
+
+		// progress bar
+		this.progress = this.el.querySelector( 'div.progress' );
+
+		// question number status
+		this.questionStatus = this.el.querySelector( 'span.number' );
+		// current question placeholder
+		this.currentNum = this.questionStatus.querySelector( 'span.number-current' );
+		this.currentNum.innerHTML = Number( this.current + 1 );
+		// total questions placeholder
+		this.totalQuestionNum = this.questionStatus.querySelector( 'span.number-total' );
+		this.totalQuestionNum.innerHTML = this.questionsCount;
+
+		this.isFilled=false;
+
+	};
+
 	stepsForm.prototype._init = function() {
 		// current question
 		this.current = 0;
@@ -206,6 +234,11 @@
 var mobileRegex = /^\+?([0-9]{2,3})?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
 		// current question´s input
 		var input = this.questions[ this.current ].querySelector( '.reg_question' ).value;
+
+		if(this.current===7||this.current===8){
+			return true;
+		}
+
 		if( input === '' ) {
 			this._showError( 'EMPTYSTR' );
 			return false;
