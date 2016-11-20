@@ -4,12 +4,12 @@
  *
  * Licensed under the MIT license.
  * http://www.opensource.org/licenses/mit-license.php
- * 
+ *
  * Copyright 2014, Codrops
  * http://www.codrops.com
  */
 ;( function( window ) {
-	
+
 	'use strict';
 
 	var transEndEventNames = {
@@ -23,7 +23,7 @@
 		support = { transitions : Modernizr.csstransitions };
 
 	function extend( a, b ) {
-		for( var key in b ) { 
+		for( var key in b ) {
 			if( b.hasOwnProperty( key ) ) {
 				a[key] = b[key];
 			}
@@ -34,8 +34,8 @@
 	function stepsForm( el, options ) {
 		this.el = el;
 		this.options = extend( {}, this.options );
-  		extend( this.options, options );
-  		this._init();
+		extend( this.options, options );
+		this._init();
 	}
 
 	stepsForm.prototype.options = {
@@ -43,6 +43,7 @@
 	};
 
 	stepsForm.prototype._reset =function() {
+
 		this.current = 0;
 
 		// show first question
@@ -68,7 +69,13 @@
 
 		this.isFilled=false;
 
+		this._progress();
+		$('.form_nav li').removeClass('active_nav');
+		$('.form_nav li:nth-of-type(1)').addClass('active_nav');
+		$('.prev').removeClass('show');
+
 	};
+
 	stepsForm.prototype._init = function() {
 		// current question
 		this.current = 0;
@@ -79,25 +86,29 @@
 		this.questionsCount = this.questions.length;
 		// show first question
 		classie.addClass( this.questions[0], 'current' );
-		
+
 		// next question control
 		this.ctrlNext = this.el.querySelector( 'button.next' );
 
+		// next question control
+		this.ctrlPrev = this.el.querySelector( 'button.prev' );
+
+
 		// progress bar
 		this.progress = this.el.querySelector( 'div.progress' );
-		
+
 		// question number status
 		this.questionStatus = this.el.querySelector( 'span.number' );
 		// current question placeholder
 		this.currentNum = this.questionStatus.querySelector( 'span.number-current' );
-		this.currentNum.innerHTML = Number( this.current + 1 );		
+		this.currentNum.innerHTML = Number( this.current + 1 );
 		// total questions placeholder
 		this.totalQuestionNum = this.questionStatus.querySelector( 'span.number-total' );
 		this.totalQuestionNum.innerHTML = this.questionsCount;
 
 		// error message
 		this.error = this.el.querySelector( 'span.error-message' );
-		
+
 		// init events
 		this._initEvents();
 	};
@@ -116,9 +127,14 @@
 		firstElInput.addEventListener( 'focus', onFocusStartFn );
 
 		// show next question
-		this.ctrlNext.addEventListener( 'click', function( ev ) { 
+		this.ctrlNext.addEventListener( 'click', function( ev ) {
 			ev.preventDefault();
-			self._nextQuestion(); 
+			self._nextQuestion();
+		} );
+
+		this.ctrlPrev.addEventListener( 'click', function( ev ) {
+			ev.preventDefault();
+			self._prevQuestion();
 		} );
 
 		// pressing enter will jump to next question
@@ -137,7 +153,7 @@
 			// tab
 			if( keyCode === 9 ) {
 				ev.preventDefault();
-			} 
+			}
 		} );
 	};
 
@@ -167,10 +183,15 @@
 			// change the current question number/status
 			this._updateQuestionNumber();
 			var QNo = this.current + 1;
-		$('.form_nav li').removeClass('active_nav');
-		$('.form_nav li:nth-of-type('+ QNo +')').addClass('active_nav');
+			$('.form_nav li').removeClass('active_nav');
+			$('.form_nav li:nth-of-type('+ QNo +')').addClass('active_nav');
 			// add class "show-next" to form element (start animations)
 			classie.addClass( this.el, 'show-next' );
+			if(QNo > 1){
+				$('.prev').addClass('show');
+			}else{
+				$('.prev').removeClass('show');
+			}
 
 			// remove class "current" from current question and add it to the next one
 			// current question
@@ -191,10 +212,15 @@
 				else {
 					classie.removeClass( self.el, 'show-next' );
 					self.currentNum.innerHTML = self.nextQuestionNum.innerHTML;
-					self.questionStatus.removeChild( self.nextQuestionNum );
+					var elements = self.questionStatus.querySelectorAll(".number-next")||[];
+
+					for(var i=0;i<elements.length;i++){
+						self.questionStatus.removeChild(elements[i]);
+					}
+					//self.questionStatus.removeChild( self.nextQuestionNum );
 					// force the focus on the next input
 					nextQuestion.querySelector( '.reg_question' ).focus();
-					
+
 				}
 			};
 
@@ -204,7 +230,84 @@
 		else {
 			onEndTransitionFn();
 		}
-	}
+	};
+
+
+	stepsForm.prototype._prevQuestion = function() {
+		/*if( !this._validade() ) {
+		 return false;
+		 }*/
+
+		// check if form is filled
+		/*if( this.current === this.questionsCount - 1 ) {
+		 this.isFilled = true;
+		 }*/
+
+		// clear any previous error messages
+		this._clearError();
+
+		// current question
+		var currentQuestion = this.questions[ this.current ];
+
+		// increment current question iterator
+		--this.current;
+
+
+		// update progress bar
+		this._progress();
+
+		if( !this.isFilled ) {
+			// change the current question number/status
+			this._updateQuestionNumber();
+			var QNo = this.current + 1;
+			$('.form_nav li').removeClass('active_nav');
+			$('.form_nav li:nth-of-type('+ QNo +')').addClass('active_nav');
+			// add class "show-next" to form element (start animations)
+			classie.addClass( this.el, 'show-next' );
+			if(QNo > 1){
+				$('.prev').addClass('show');
+			}else{
+				$('.prev').removeClass('show');
+			}
+
+			// remove class "current" from current question and add it to the next one
+			// current question
+			var nextQuestion = this.questions[ this.current ];
+			classie.removeClass( currentQuestion, 'current' );
+			classie.addClass( nextQuestion, 'current' );
+		}
+
+		// after animation ends, remove class "show-next" from form element and change current question placeholder
+		var self = this,
+			onEndTransitionFn = function( ev ) {
+				if( support.transitions ) {
+					this.removeEventListener( transEndEventName, onEndTransitionFn );
+				}
+				if( self.isFilled ) {
+					self._submit();
+				}
+				else {
+					classie.removeClass( self.el, 'show-next' );
+					self.currentNum.innerHTML = self.nextQuestionNum.innerHTML;
+					var elements = self.questionStatus.querySelectorAll(".number-next")||[];
+
+					for(var i=0;i<elements.length;i++){
+						self.questionStatus.removeChild(elements[i]);
+					}
+					//self.questionStatus.removeChild( self.nextQuestionNum );
+					// force the focus on the next input
+					nextQuestion.querySelector( '.reg_question' ).focus();
+
+				}
+			};
+
+		if( support.transitions ) {
+			this.progress.addEventListener( transEndEventName, onEndTransitionFn );
+		}
+		else {
+			onEndTransitionFn();
+		}
+	};
 
 	// updates the progress bar by setting its width
 	stepsForm.prototype._progress = function() {
@@ -230,29 +333,33 @@
 	// the validation function
 	stepsForm.prototype._validade = function() {
 		var emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-var mobileRegex = /^\+?([0-9]{2,3})?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+		var mobileRegex = /^\+?([0-9]{2,3})?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
 		// current question´s input
 		var input = this.questions[ this.current ].querySelector( '.reg_question' ).value;
+
+		if(this.current===7||this.current===8){
+			return true;
+		}
+
 		if( input === '' ) {
 			this._showError( 'EMPTYSTR' );
 			return false;
 		}
 		if(this.current == 1){
-		var mobile = this.questions[ this.current ].querySelector( '.reg_question' ).value;	
-		if (!mobileRegex.test(mobile)) {
-		this._showError( 'NOTVALIDMOB' );	
-		return false;
-		}
+			var mobile = this.questions[ this.current ].querySelector( '.reg_question' ).value;
+			if (!mobileRegex.test(mobile)) {
+				this._showError( 'NOTVALIDMOB' );
+				return false;
+			}
 		}
 		if(this.current == 2){
-		var email = this.questions[ this.current ].querySelector( '.reg_question' ).value;	
-		if (!emailRegex.test(email)) {
-		this._showError( 'INVALIDEMAIL' );	
-		return false;
+			var email = this.questions[ this.current ].querySelector( '.reg_question' ).value;
+			if (!emailRegex.test(email)) {
+				this._showError( 'INVALIDEMAIL' );
+				return false;
+			}
+			$('#q6').val($('#q3').val());
 		}
-		$('#q6').val($('#q3').val());	
-		}
-		
 
 		return true;
 	};
@@ -261,15 +368,15 @@ var mobileRegex = /^\+?([0-9]{2,3})?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4}
 	stepsForm.prototype._showError = function( err ) {
 		var message = '';
 		switch( err ) {
-			case 'EMPTYSTR' : 
+			case 'EMPTYSTR' :
 				message = 'please fill the field before continuing';
 				break;
-			case 'INVALIDEMAIL' : 
+			case 'INVALIDEMAIL' :
 				message = 'please fill a valid email address';
 				break;
-			case 'NOTVALIDMOB' : 
+			case 'NOTVALIDMOB' :
 				message = 'please fill a valid phone number';
-				break;	
+				break;
 			// ...
 		};
 		this.error.innerHTML = message;
