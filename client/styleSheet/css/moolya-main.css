@@ -1250,34 +1250,6 @@ span.sb-icon:before {
 .margin-top10{margin-top: 10px;}
 
 
-/*responsive*/
-@media screen and (max-width: 1024px) and (min-width: 768px) {
-	.moolya-container{
-		width: 92.5%;
-	}
-	.moolya-left-nav{
-		width: 7.5%;
-	}
-	.m-com-type{
-		width: 70%;
-	}
-	.m-box-logo img{
-		width: 150px;
-	}
-
-	.ideator-mask{width: 73%;}
-	.ideator-mask span{width: 79%;}
-
-	.provider-mask{width: 87%;left: 9%;}
-
-	.m-fn-box-wrapp .grid-item,
-	.m-fn-box-wrapp .grid-sizer { width: 23%;}
-	.m-fn-box-wrapp .grid-item--width3 { width: 47%; min-height: 250px; }
-	.funder-mask{left: 4%;}
-	.fun-center { left: 28%;}
-}
-
-
 
 /*Register form css start*/
 .register_btn{background: #ce1936;color: #fff;position: absolute;top: 123px;height: 78px;width: 28px;right: 0px;cursor:pointer;z-index: 99;transition:.3s ease-in-out;}
@@ -1629,4 +1601,30 @@ span.sb-icon:before {
 	width: 196px;
 	height: 174px;
 	border-radius: 21%;
+}
+
+/*responsive*/
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+	.moolya-container{
+		width: 92.5%;
+	}
+	.moolya-left-nav{
+		width: 7.5%;
+	}
+	.m-com-type{
+		width: 70%;
+	}
+	.m-box-logo img{
+		width: 150px;
+	}
+
+	.ideator-mask{width: 73%;}
+	.ideator-mask span{width: 79%;}
+
+	.provider-mask{width: 87%;left: 9%;}
+
+	.m-fn-box-wrapp .grid-item,	.m-fn-box-wrapp .grid-sizer { width: 23%;}
+	.m-fn-box-wrapp .grid-item--width3 { width: 47%; min-height: 250px; }
+	.funder-mask{left: 4%;}
+	.fun-center { left: 28%;}
 }

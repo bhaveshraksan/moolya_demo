@@ -79,6 +79,17 @@ Router.map(function () {
         })
     });
 
+    this.route('promotorDetail', {
+        path:'/promotorDetail',
+        layoutTemplate:'moolyaLayout',
+        yieldTemplates: _.extend({}, {}, {
+            'moolyaHeader': {to: 'header'},
+            'moolyaLeftNav': {to: 'leftNav'}
+        })
+    });
+
+
+
     this.route('membership', {
         path:'/membership',
         layoutTemplate:'moolyaLayout',
@@ -105,6 +116,15 @@ Router.map(function () {
             'moolyaLeftNav': {to: 'leftNav'}
         })
     });
+    this.route('balanceSheet', {
+        path:'/balanceSheet',
+        layoutTemplate:'moolyaLayout',
+        yieldTemplates: _.extend({}, {}, {
+            'moolyaHeader': {to: 'header'},
+            'moolyaLeftNav': {to: 'leftNav'}
+        })
+    });
+
 
     this.route('ideators', {
         path:'/ideators',

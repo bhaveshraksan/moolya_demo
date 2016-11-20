@@ -69,7 +69,6 @@
 		this.isFilled=false;
 
 	};
-
 	stepsForm.prototype._init = function() {
 		// current question
 		this.current = 0;
@@ -234,11 +233,6 @@
 var mobileRegex = /^\+?([0-9]{2,3})?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
 		// current question´s input
 		var input = this.questions[ this.current ].querySelector( '.reg_question' ).value;
-
-		if(this.current===7||this.current===8){
-			return true;
-		}
-
 		if( input === '' ) {
 			this._showError( 'EMPTYSTR' );
 			return false;

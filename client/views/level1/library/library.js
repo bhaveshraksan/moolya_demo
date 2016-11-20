@@ -1,7 +1,7 @@
 /**
  * Created by murali on 18/11/16.
  */
-Template.library.onRendered(function(){
+Template.ideatorlibrary.onRendered(function(){
     Meteor.defer(function (){
         var swiper = new Swiper('.swiper-container', {
             pagination: '.swiper-pagination',
@@ -16,7 +16,7 @@ Template.library.onRendered(function(){
     })
 });
 
-Template.library.onRendered(function(){
+Template.ideatorlibrary.onRendered(function(){
     $("[rel^='lightbox']").prettyPhoto();
 });
 
