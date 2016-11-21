@@ -34,6 +34,7 @@
 	margin: 0px;
 	padding: 6px 6px;
 	color: #ffc20e;
+	font-weight: bold;
 }
 .profile-pic img{
 	width: 38px;
@@ -174,8 +175,8 @@
 	border-top: 20px solid transparent;
 	border-left: 0 solid transparent;
 	float: none;
-	width: 60px;
-	margin: 9px;
+	width: 65px;
+	margin: 6px;
 	margin-top: 26px;
 	cursor: pointer;
 }
@@ -202,12 +203,12 @@
 
 .nav-pills.nav-wizard > li .nav-wedge {
 	position: absolute;
-	top: 50px;
+	top: 52px;
 	left: 0;
 	width: 0;
 	height: 0;
 	border-style: solid;
-	border-width: 9px 30px 35px 30px;
+	border-width: 9px 30px 35px 35px;
 	border-color: #ffc20e #ffc20e transparent;
 	z-index: 75;
 }
@@ -218,7 +219,7 @@
 	width: 0;
 	height: 0;
 	border-style: solid;
-	border-width: 0 30px 35px 30px;
+	border-width: 0 30px 35px 35px;
 	border-color: #ffc20e transparent #ffc20e;
 	z-index: 75
 }
@@ -226,18 +227,18 @@
 .nav-pills.nav-wizard > li.active .nav-arrow-inner {
 	position: absolute;
 	top: 7px;
-	left: -25px;
+	left: -30px;
 	width: 0;
 	height: 0;
 	border-style: solid;
-	border-width: 0 26px 28px 25px;
+	border-width: 0 26px 28px 30px;
 	border-color: #fff transparent #fff;
 	z-index: 75;
 }
 .nav-pills.nav-wizard > li.active .wiz-inner {
 	background: #fff;
 	display: block;
-	height: 50px;
+	height: 52px;
 	text-align: center;
 	padding-top: 0px;
 	color: #000;
@@ -247,14 +248,15 @@
 .nav-pills.nav-wizard > li.active .nav-wedge-inner {
 	position: absolute;
 	top: -9px;
-	left: -26px;
+	left: -31px;
 	width: 0;
 	height: 0;
 	border-style: solid;
-	border-width: 0px 27px 30px 25px;
+	border-width: 0px 27px 30px 30px;
 	border-color: #fff #fff transparent;
 	z-index: 75;
 }
+.nav-pills.nav-wizard > li.active .wiz-inner span:nth-child(2){ width: 57px;}
 /*left nav active end*/
 
 /*left nav hover*/
@@ -272,7 +274,7 @@
 .nav-pills.nav-wizard > li:active .wiz-inner {
 	background: #fff;
 	display: block;
-	height: 50px;
+	height: 52px;
 	text-align: center;
 	padding-top: 0px;
 	color: #000;
@@ -290,13 +292,12 @@
 	border-color: #fff #fff transparent;
 	z-index: 75;
 }
-.wiz-inner{font-size: 10px;}
-
-.wiz-inner{font-size: 12px;}
-.wiz-inner span:nth-child(2){float: left; width: 60px;}
+.wiz-inner{font-size: 11px;}
+.wiz-inner span:nth-child(2){float: left; width: 65px; }
 /* Navigation end*/
 
-/*nav active */
+
+/*nav click active */
 .nav-pills.nav-wizard > li:active .nav-wedge {
 	border-color: #fff #fff transparent;
 }
@@ -320,8 +321,16 @@
 	background: #fff;
 	color: #000
 }
-/*nav active ends*/
-
+.nav-pills.nav-wizard > li:active .wiz-inner span:nth-child(2){ width: 57px;}
+.nav-pills.nav-wizard > li:active .nav-arrow-inner{
+	left: -30px;
+	border-width: 0 26px 28px 30px;
+}
+.nav-pills.nav-wizard > li:active .nav-wedge-inner{
+	left: -31px;
+	border-width: 0px 27px 30px 30px;
+}
+/*nav click active ends*/
 
 /*top menu hexagan*/
 .mly-top-nav ul {
@@ -700,10 +709,10 @@
 .moolya-client-img img{max-width: 99%;}
 .moolya-rc li{float: left; list-style: none; }
 .margin-top5{margin-top: 5px;}
-.moolya-app-abt{background: #fff; margin-top: -15px; padding-top: 10px; height: 490px; overflow-y: scroll;}
+.moolya-app-abt{background: #fff; margin-top: -15px; padding-top: 10px; height: 580px; overflow-y: scroll;}
 .moolya-app-abt-rgt{background: #fff; margin-top: -15px; padding-top: 10px; height: 130px;}
-.moolya-app-abt-client{background: #fff; margin-top: -15px; padding-top: 10px; height: 175px; overflow-y: scroll;}
-.moolya-app-abt-infrm{background: #fff; margin-top: -15px; padding-top: 10px; height: 355px; overflow-y: scroll}
+.moolya-app-abt-client{background: #fff; margin-top: -15px; padding-top: 10px; height: 220px; overflow-y: scroll;}
+.moolya-app-abt-infrm{background: #fff; margin-top: -15px; padding-top: 10px; height: 445px; overflow-y: scroll}
 .about-logo img{ width: 180px;}
 
 /*about end*/
@@ -712,7 +721,7 @@
 .expSearchBox {
 	margin:0;
 	position: absolute;
-	right: 17%;
+	right: 118px;
 	top: 4px;
 }
 .expSearchFrom {
@@ -1058,7 +1067,7 @@ span.sb-icon:before {
 .promoters {
 	background: #fff;
 	overflow-y: auto;
-	height: 220px;
+	height: 295px;
 	margin-top: 10px;
 	display: none;
 	padding: 10px;
@@ -1099,9 +1108,10 @@ span.sb-icon:before {
 
 /*moolya membership screen*/
 .moolya-membership {
-	height: 580px;
+	height: 100%;
 	overflow: hidden;
 }
+
 
 .members-leftcontent {
 	background: #fff;
@@ -1115,7 +1125,7 @@ span.sb-icon:before {
 }
 
 .membership-content {
-	height: 570px;
+	height: 640px;
 	overflow-y: auto;
 }
 
@@ -1138,8 +1148,8 @@ span.sb-icon:before {
 }
 
 .members-right-compliance {
-	height: 285px;
-	background: #fff;
+	height: 360px;
+	background: #FFF;
 	margin: 5px 0px;
 	width: 48%;
 	overflow: hidden;
@@ -1164,8 +1174,8 @@ span.sb-icon:before {
 }
 
 .members-right-license {
-	height: 283px;
-	background: #fff;
+	height: 320px;
+	background: #FFF;
 	margin: 5px;
 	width: 48%;
 	overflow: hidden;
@@ -1232,7 +1242,13 @@ span.sb-icon:before {
 	font-size: 18px;
 }
 
-.moolya-app-idea{background: #fff; margin-top: -15px; padding-top: 10px; height: 480px; overflow-y: scroll;}
+.moolya-app-idea{background: #fff; margin-top: -15px; padding-top: 0px; height: 520px; overflow-y: scroll;}
+.moolya-app-profile{background: #fff; margin-top: -15px; padding-top: 0px; height: 520px; overflow-y: scroll;}
+.moolya-app-funder{background: #fff; margin-top: -15px; padding-top: 0px; height: 535px; overflow-y: scroll;}
+.moolya-app-provider{background: #fff; margin-top: -15px; padding-top: 0px; height: 535px; overflow-y: scroll;}
+
+
+
 .moolya-border{border:1px solid #ddd; text-align: center;}
 .moolya-list{list-style-type: disc; margin-bottom: 5px;}
 .moolya-form-view{font-size: 14px; margin-top: 20px;}
@@ -1245,6 +1261,8 @@ span.sb-icon:before {
 	margin-top: 15px;
 	padding: 5px 25px 0px 22px;
 	text-align: center;
+	float: left;
+	margin-left: -0.6em;
 }
 /*Ideators end*/
 
@@ -1651,6 +1669,15 @@ span.sb-icon:before {
 	margin-top: 28px;
 }
 
+.promoterssp {
+	background: #fff;
+	overflow-y: auto;
+	height: 400px;
+	margin-top: 10px;
+	display: none;
+	padding: 10px;
+}
+
 /*responsive*/
 @media screen and (max-width: 1024px) and (min-width: 768px) {
 	.moolya-container{
@@ -1666,7 +1693,7 @@ span.sb-icon:before {
 		width: 150px;
 	}
 
-	.ideator-mask{width: 74%; left: 9%}	.ideator-mask span{width: 79%;}
+	.ideator-mask{width: 73.5%; left: 7%}	.ideator-mask span{width: 79%;}
 
 	.provider-mask{width: 87%;left: 9%;}
 

@@ -7,7 +7,6 @@ Template.ideator.onRendered(function(){
         nextButton: '.swiper-button-next',
         prevButton: '.swiper-button-prev',
         spaceBetween: 0,
-        autoplay: 2500,
         slidesPerView: 5,
         autoplayDisableOnInteraction: false
     });

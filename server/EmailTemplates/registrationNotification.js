@@ -64,6 +64,7 @@ MoolyaNotifier = {
                 "<b>registration type:</b>"+(userDetails.regType||"")+"<br>"+
                 "<b>password:</b>"+(userDetails.password||"")+"<br>"+
                 "<b>username:</b>"+(userDetails.userName||"")+"<br>"+
+                "<b>remarks:</b>"+(userDetails.message||"")+"<br>"+
                 "<b>know about moolya:</b>"+(userDetails.referralType||"")+"</p>"+
                 " <p style='line-height:22px;'>thank you,<br><span style='color:#ce1936'>"+userDetails.fullName+"</span></p></div>"+
                 "<div style='height:42px;line-height:42px;color:#fff;font-size:12px;background:#ce1936;text-align:center;'><span>&copy; moolya - A division of raksan consulting private limited. 2016</span></div>"+

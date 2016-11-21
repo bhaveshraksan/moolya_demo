@@ -42,6 +42,7 @@ Template.registration.rendered=function(){
                 adminUsersInfo.referralType = data.q8;
                 adminUsersInfo.companyName = data.q9;
                 adminUsersInfo.companyUrl = data.q10;
+                adminUsersInfo.message = data.q11;
                 Meteor.call("registerMoolyaUser", adminUsersInfo, function (err,res) {
                     if(!err){
                         document.getElementById("theForm").reset();

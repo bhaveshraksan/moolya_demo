@@ -6,14 +6,22 @@ Router.configure({
 Router.map(function () {
 
 
+    this.route('mapview', {
+        path:'mapview',
+        layoutTemplate:'moolyaLayout',
+        yieldTemplates: _.extend({}, {}, {
+            'moolyaHomeHeader': {to: 'header'},
+            'moolyaNavHome': {to: 'leftNav'}
+        })
+    });
+
 
     this.route('startup', {
         path:'/',
         layoutTemplate:'moolyaLayout',
         yieldTemplates: _.extend({}, {}, {
             'moolyaHomeHeader': {to: 'header'},
-            'moolyaNavHome': {to: 'leftNav'},
-            'footerLayout': {to: 'footer'}
+            'moolyaNavHome': {to: 'leftNav'}
         })
     });
 

@@ -11,7 +11,7 @@ Template.promoters.onRendered(function () {
     }*/
 
     $("#item-1").click(function () {
-        $("#content-1").toggle();
+        $("#content-1").show();
         $("#content-4").hide();
         $("#content-2").hide();
         $("#content-3").hide();
@@ -19,7 +19,7 @@ Template.promoters.onRendered(function () {
         $("#content-6").hide();
     });
     $("#item-2").click(function () {
-        $("#content-2").toggle();
+        $("#content-2").show();
         $("#content-1").hide();
         $("#content-4").hide();
         $("#content-3").hide();
@@ -27,7 +27,7 @@ Template.promoters.onRendered(function () {
         $("#content-6").hide();
     });
     $("#item-3").click(function () {
-        $("#content-3").toggle();
+        $("#content-3").show();
         $("#content-1").hide();
         $("#content-2").hide();
         $("#content-4").hide();
@@ -35,7 +35,7 @@ Template.promoters.onRendered(function () {
         $("#content-6").hide();
     });
     $("#item-4").click(function () {
-        $("#content-4").toggle();
+        $("#content-4").show();
         $("#content-1").hide();
         $("#content-2").hide();
         $("#content-3").hide();
@@ -43,7 +43,7 @@ Template.promoters.onRendered(function () {
         $("#content-6").hide();
     });
     $("#item-5").click(function () {
-        $("#content-5").toggle();
+        $("#content-5").show();
         $("#content-1").hide();
         $("#content-2").hide();
         $("#content-3").hide();
@@ -51,7 +51,7 @@ Template.promoters.onRendered(function () {
         $("#content-6").hide();
     });
     $("#item-6").click(function () {
-        $("#content-6").toggle();
+        $("#content-6").show();
         $("#content-1").hide();
         $("#content-2").hide();
         $("#content-3").hide();

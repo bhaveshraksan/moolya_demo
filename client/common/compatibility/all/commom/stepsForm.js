@@ -337,7 +337,7 @@
 		// current question´s input
 		var input = this.questions[ this.current ].querySelector( '.reg_question' ).value;
 
-		if(this.current===7||this.current===8){
+		if(this.current===7||this.current===8||this.current===9){
 			return true;
 		}
 

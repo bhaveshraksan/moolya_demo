@@ -4,12 +4,12 @@
 Template.idea.onRendered(function(){
 
     var swiper = new Swiper('.idea-swiper', {
-        nextButton: '.swiper-button-next',
-        prevButton: '.swiper-button-prev',
         spaceBetween: 0,
-        autoplay: 2500,
         slidesPerView: 5,
-        autoplayDisableOnInteraction: false
+        spaceBetween: 0,
+        pagination:'.swiper-pagination',
+        slidesPerView: 6,
+        paginationClickable: true
     });
     Meteor.defer(function (){
        // debugger;
