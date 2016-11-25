@@ -859,10 +859,18 @@ input#field:focus + .close span.back{
 }
 
 .promoter-image {
-	width: 200px;
-	height: 200px;
+	width: 160px;
+	height: 150px;
 	float: left;
+	text-align: center;
+	margin-left: -10px;
 }
+
+.provider-abt-img{border: 4px solid #ddd;
+    height: 125px;
+    width: 135px;
+    margin-top: 4px;
+    border-radius: 5px;}
 
 .promoter-image figure {
 	padding: 10px;
@@ -874,7 +882,7 @@ input#field:focus + .close span.back{
 
 .promoter-image figcaption {
 	font-size: 25px;
-	padding: 10px;
+	padding: 0px;
 }
 
 
@@ -1244,8 +1252,8 @@ span.sb-icon:before {
 
 .moolya-app-idea{background: #fff; margin-top: -15px; padding-top: 0px; height: 520px; overflow-y: scroll;}
 .moolya-app-profile{background: #fff; margin-top: -15px; padding-top: 0px; height: 520px; overflow-y: scroll;}
-.moolya-app-funder{background: #fff; margin-top: -15px; padding-top: 0px; height: 535px; overflow-y: scroll;}
-.moolya-app-provider{background: #fff; margin-top: -15px; padding-top: 0px; height: 535px; overflow-y: scroll;}
+.moolya-app-funder{background: #fff; margin-top: -15px; padding-top: 0px; height: 480px; overflow-y: scroll;}
+.moolya-app-provider{background: #fff; margin-top: -15px; padding-top: 0px; height: 480px; overflow-y: scroll;}
 
 
 
@@ -1275,12 +1283,12 @@ span.sb-icon:before {
 /*Register form css start*/
 .register_btn{background: #ce1936;color: #fff;position: absolute;top: 123px;height: 78px;width: 28px;right: 0px;cursor:pointer;z-index: 99;transition:.3s ease-in-out;}
 .register_btn:hover{width:33px;}
-.register_btn.btn_form_open{right: 352px;width: 28px !important;}
+.register_btn.btn_form_open{right: 380px;width: 28px !important;}
 .register_btn span{transform:rotate(-90deg);text-shadow: 0px 1px 1px #333;display: inline-block;margin-top: 28px;margin-left: -14px;position: absolute;}
 .register_btn:after {width: 23px;height: 78px;background: url(/assets/images/hex_arrow.png);position: absolute;left: -22px;top: 0px;content: "";}
 .form_container{width: 0px;height:165px; background:#db5c70;position: absolute;right: 0px;top: 123px;border-radius: 0px 0px 0px 12px;padding:0px;overflow: hidden;transition:.3s ease-in-out;z-index: 99;}
-.register_form_open{width:352px;padding: 10px 20px;}
-.form_nav{margin-top: 26px;}
+.register_form_open{width:380px; padding: 10px 20px;}
+.form_nav{margin-top: 35px; text-align: center; margin-left: -34px;}
 .form_nav li{display:inline-block;width: 12px;height: 12px;border-radius: 50%;background: #920f24;margin-right: 8px;opacity:0.4;}
 .form_nav li.active_nav{opacity: 1;}
 .show_p{background: url(assets/images/show.svg);width: 24px;height: 24px;position: absolute;right: 0px;bottom: 5px;cursor: pointer;}
@@ -1580,10 +1588,10 @@ span.sb-icon:before {
 	height: 122px !important;
 }
 .ideator-footer-swipe-bg img{
-	width: 55%;
-	margin-top: 6px;
+	width: 50%;
+	margin-top: 2px;
 	border-radius: 50%;
-	height: 72%;
+	height: 80%;
 }
 
 .funder-footer-swipe-bg{
@@ -1657,7 +1665,9 @@ span.sb-icon:before {
 	height: 55%;
 	width: 65%;}
 
+/*
 .moolya-border{border-right:4px solid #ddd;}
+*/
 
 .provider-footer-swipe-bg{
 	background: url(assets/images/provider-bg100x.png) no-repeat center;
@@ -1665,14 +1675,14 @@ span.sb-icon:before {
 	height: 102px !important;
 }
 .provider-footer-swipe-bg img{
-	width: 35%;
-	margin-top: 28px;
+	width: 30%;
+	margin-top: 30px;
 }
 
 .promoterssp {
 	background: #fff;
 	overflow-y: auto;
-	height: 400px;
+	height: 470px;
 	margin-top: 10px;
 	display: none;
 	padding: 10px;
@@ -1701,4 +1711,11 @@ span.sb-icon:before {
 	.m-fn-box-wrapp .grid-item--width3 { width: 47%; min-height: 250px; }
 	.funder-mask{left: 4%;}
 	.fun-center { left: 28%;}
+
+	.ideator-footer-swipe-bg img{
+		width: 68%;
+		margin-top: 2px;
+		border-radius: 50%;
+		height: 80%;
+	}
 }

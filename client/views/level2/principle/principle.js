@@ -10,7 +10,6 @@ Template.principles.onRendered(function(){
 
     var swiper = new Swiper('.principles-swiper', {
         spaceBetween: 0,
-        slidesPerView: 5,
         spaceBetween: 0,
         pagination:'.swiper-pagination',
         slidesPerView: 6,
